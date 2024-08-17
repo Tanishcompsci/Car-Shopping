@@ -1,6 +1,6 @@
 //Car Shopping - Tanish Parlapall
 
-//imports for specific functions
+//imports
 #include <iostream>
 #include <string>
 #include <cstdio>
@@ -15,7 +15,7 @@ using namespace std;
 #include <string>
 
 void calc_tax(int num) {
-  float tax = num+num*(.07);//based on new jersey sales tax
+  float tax = num+num*(.07);//based on local sales tax
   int choice;
   cout << "Total cost with tax: $" << tax << endl;
   if(tax > 5000){
@@ -53,7 +53,8 @@ int main() {
 
   cout << "Answer all the questions using the number keys." << endl; 
 
-  do{//do-while loop with question and options
+  //do-while loop with questions and options
+  do{
     cout << "\nWhat type of car do you prefer?\n1. Stealthy 2-seater\n2. Small SUV\n3. Midsize SUV\n4. Van\n5. 18-wheel Truck" << endl; 
     cin >> size;
   } while(size > 5 || size < 1);//This do-while loop checks to make sure the user enters a number within the range of choices provided
@@ -139,3 +140,4 @@ if(all_aspects[3] == "Jazzy Pink"){
   calc_tax(6000);//6000 is total, minus tax
     }
 }
+//end car shopping
